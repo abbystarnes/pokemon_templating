@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/pokemon', (_req, res) => {
-  res.render('pages/index', {
+  res.render('pages/index2', {
     data: pokemonList
   });
 });
@@ -38,7 +38,7 @@ app.get('/pokemon/:id', (req, res, next) => {
     next();
   }
 
-  res.render('pages/profile', {
+  res.render('pages/profile2', {
     data: pokemonToRender
   });
 });
